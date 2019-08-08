@@ -1,1 +1,8 @@
 // Specific CSS for your home-page
+$font-stack:    Helvetica, sans-serif;
+$primary-color: red;
+
+body {
+  font: 100% $font-stack;
+  background-color: $primary-color;
+}
