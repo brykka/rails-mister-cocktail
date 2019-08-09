@@ -1,0 +1,47 @@
+.card-show {
+  overflow: hidden;
+  width: 900px;
+  height: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  flex: flex-wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 50px;
+}
+
+.card-show {
+
+
+  img {
+    height: 100%;
+    width: 350px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+    color: #555555;
+  }
+}
+
+  .card-info {
+    padding: 16px;
+
+    a {
+      color: #555555;
+      font-family: $p-font;
+    }
+  }

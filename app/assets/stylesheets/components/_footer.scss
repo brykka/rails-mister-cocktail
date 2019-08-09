@@ -1,0 +1,11 @@
+footer {
+  a {
+    color: #555555;
+    font-family: $p-font;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $light-gray;
+  }
+}

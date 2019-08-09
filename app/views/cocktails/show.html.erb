@@ -1,24 +1,34 @@
 
   <div class="container">
-<h1><%= @cocktail.name %></h1>
-    <div class="">
-      <p> <% @cocktail.doses.each do |dose| %>
-        <br> <br>
-        <%= dose.description  %>
-        <br> <%= dose.ingredient.name %>
-        <%= link_to cocktail_dose_path(@cocktail, dose),
-          method: :delete,
-          data: { confirm: 'for real real?' } do %>
-            <i class="fas fa-trash"></i>
-          <% end %>
-        <% end %>
-      </p>
+      <div class="row">
+        <div class="col">
+          <div class="card-show">
+              <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+              <div class="card-how-info">
+            <div class="name">
+          <h1><%= @cocktail.name %></h1>
+          </div>
+                <p> <% @cocktail.doses.each do |dose| %>
+                  <div class="recipe">
+                  <%= dose.description  %>
+                  <%= dose.ingredient.name %>
+                  <%= link_to cocktail_dose_path(@cocktail, dose),
+                    method: :delete,
+                    data: { confirm: 'for real real?' } do %>
+                      <i class="fas fa-trash"></i>
+                  </div>
+                    <% end %>
+                  <% end %>
+                </p>
+            </div>
+            </div>
+            </div>
+        </div>
     </div>
-</div>
+      <footer>
+        <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %> <br>
+        <%= link_to "back to cocktails", cocktails_path %>
+      </footer>
 
-<footer>
-  <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %> <br>
-  <%= link_to "back to cocktails", cocktails_path %>
-</footer>
 
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+
