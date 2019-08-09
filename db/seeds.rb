@@ -21,13 +21,13 @@ ingredients['drinks'].each do |ingredient|
 end
 
 ok = Cocktail.new(name: 'Sidecar')
-ok.remote_photo_url = "https://res.cloudinary.com/brykka/image/upload/v1565321032/sidecar_y9efek.jpg"
+ok.remote_photo_url = "https://res.cloudinary.com/brykka/image/upload/v1565321031/nicecolot_gqn3qc.jpg"
 ok.save
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Creme de Cacao'), description: '1 shot')
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Port'), description: 'a splash')
 
 gin_tonic = Cocktail.new(name: 'Strong Zero')
-gin_tonic.remote_photo_url = ("https://res.cloudinary.com/brykka/image/upload/v1565321032/teadrink_g4or7d.jpg")
+gin_tonic.remote_photo_url = ("https://res.cloudinary.com/brykka/image/upload/v1565321031/kiwi_il1orf.jpg")
 gin_tonic.save
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Gin'), description: '1 shot')
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
@@ -38,7 +38,11 @@ moscow_mule.save
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
-
+help = Cocktail.new(name: 'help me')
+help.remote_photo_url = ("https://res.cloudinary.com/brykka/image/upload/v1565321032/raspberry_jysdsm.jpg")
+help.save
+Dose.create(cocktail: help, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
+Dose.create(cocktail: help, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
 
 
