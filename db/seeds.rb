@@ -20,19 +20,21 @@ ingredients['drinks'].each do |ingredient|
   Ingredient.create(name: ingredient['strIngredient1'])
 end
 
-ok = Cocktail.new(name: 'oookkokokok')
+ok = Cocktail.new(name: 'Sidecar')
 ok.remote_photo_url = "https://res.cloudinary.com/brykka/image/upload/v1565321032/sidecar_y9efek.jpg"
 ok.save
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Creme de Cacao'), description: '1 shot')
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Port'), description: 'a splash')
 
-
-
-gin_tonic = Cocktail.create(name: 'Gin & Tonic')
+gin_tonic = Cocktail.new(name: 'Strong Zero')
+gin_tonic.remote_photo_url = ("pinkdrink_u147he")
+gin_tonic.save
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Gin'), description: '1 shot')
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
-moscow_mule = Cocktail.create(name: 'Moscow Mule')
+moscow_mule = Cocktail.new(name: 'Suntory')
+moscow_mule.remote_photo_url = ("nicecolot_gqn3qc")
+moscow_mule.save
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
