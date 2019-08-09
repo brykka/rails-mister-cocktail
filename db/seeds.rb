@@ -27,13 +27,13 @@ Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Creme de Cacao')
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Port'), description: 'a splash')
 
 gin_tonic = Cocktail.new(name: 'Strong Zero')
-gin_tonic.remote_photo_url = ("pinkdrink_u147he")
+gin_tonic.remote_photo_url = ("https://res.cloudinary.com/brykka/image/upload/v1565321032/teadrink_g4or7d.jpg")
 gin_tonic.save
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Gin'), description: '1 shot')
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
 moscow_mule = Cocktail.new(name: 'Suntory')
-moscow_mule.remote_photo_url = ("nicecolot_gqn3qc")
+moscow_mule.remote_photo_url = ("https://tshop.r10s.jp/sake-king/cabinet/c_suntory/1869.jpg?fitin=330:330")
 moscow_mule.save
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')

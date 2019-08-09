@@ -2,7 +2,7 @@
 
       <% @cocktails.each do |cocktail| %>
         <div class="card">
-          <img src="#" />
+          <%= cl_image_tag cocktail.photo %>
           <div class="card-info">
               <ul>
                <%= link_to cocktail.name, cocktail_path(cocktail) %>
