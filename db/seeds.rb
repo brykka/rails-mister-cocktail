@@ -1,3 +1,5 @@
+
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -21,5 +23,14 @@ end
 ok = Cocktail.create(name: 'oookkokokok')
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Creme de Cacao'), description: '1 shot')
 Dose.create(cocktail: ok, ingredient: Ingredient.find_by(name: 'Port'), description: 'a splash')
+
+
+gin_tonic = Cocktail.create(name: 'Gin & Tonic')
+Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Gin'), description: '1 shot')
+Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
+
+moscow_mule = Cocktail.create(name: 'Moscow Mule')
+Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
+Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
 
