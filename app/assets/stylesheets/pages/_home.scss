@@ -4,5 +4,22 @@ $primary-color: red;
 
 body {
   font: 100% $font-stack;
-  background-color: $primary-color;
+  background-color: #f7e8a0;
+  color: #555555;
+  // padding: 30px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 30px;
+ }
+
+ h1 {
+  font-family: $h1-font;
+ }
+
+footer {
+  padding: 20px;
 }

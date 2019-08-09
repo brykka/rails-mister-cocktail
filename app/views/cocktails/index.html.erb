@@ -1,21 +1,23 @@
-<h2>Cocktails </h2>
+<div class="container">
 
+      <% @cocktails.each do |cocktail| %>
+        <div class="card">
+          <img src="#" />
+          <div class="card-info">
+              <ul>
+               <%= link_to cocktail.name, cocktail_path(cocktail) %>
+                <%= link_to cocktail_path(cocktail), method: :delete,
+                data: { confirm: 'reeeeeaaaaly?'} do %>
+                  <i class="fas fa-trash"></i>
+                  <% end %>
 
-<div class="card">
-    <% @cocktails.each do |cocktail| %>
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-info">
-      <ul>
-        <li><%= link_to cocktail.name, cocktail_path(cocktail) %>
-        <%= link_to cocktail_path(cocktail), method: :delete,
-        data: { confirm: 'reeeeeaaaaly?'} do %>
-          <i class="fas fa-trash"></i>
-          <% end %>
-        </li>
-      </ul>
-  </div>
-    <% end %>
+              </ul>
+          </div>
+        </div>
+      <% end %>
+
 </div>
 
-<%= link_to "Add a new cocktail", new_cocktail_path  %>
-
+<footer>
+  <%= link_to "Add a new cocktail", new_cocktail_path  %>
+</footer>
