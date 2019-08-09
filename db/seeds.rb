@@ -32,8 +32,8 @@ gin_tonic.save
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Gin'), description: '1 shot')
 Dose.create(cocktail: gin_tonic, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
 
-moscow_mule = Cocktail.new(name: 'Suntory')
-moscow_mule.remote_photo_url = ("https://tshop.r10s.jp/sake-king/cabinet/c_suntory/1869.jpg?fitin=330:330")
+moscow_mule = Cocktail.new(name: 'git commit-m "plz work"')
+moscow_mule.remote_photo_url = ("https://res.cloudinary.com/brykka/image/upload/v1565321032/watermelon_ewvwck.jpg")
 moscow_mule.save
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Vodka'), description: '1 shot')
 Dose.create(cocktail: moscow_mule, ingredient: Ingredient.find_by(name: 'Grape Soda'), description: '3 shots')
