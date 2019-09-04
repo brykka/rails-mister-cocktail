@@ -14,13 +14,19 @@
                 <%= link_to cocktail_dose_path(@cocktail, dose),
                     method: :delete,
                     data: { confirm: 'for real real?' } do %>
-                  <i class="fas fa-trash" style="color: #555555;"></i>
+                  <i class="fas fa-trash" style="color: #555555; font-size: 14px;"></i>
                 </div>
               <% end %>
             <% end %>
             <br>
             <div class="button-add">
               <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %> <br>
+            </div>
+            <div class="trash">
+              <%= link_to @cocktail, method: :delete,
+                data: { confirm: 'reeeeeaaaaly?'} do %>
+                <i class="fas fa-trash"></i>
+              <% end %>
             </div>
           </p>
         </div>

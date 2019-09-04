@@ -10,8 +10,10 @@
   align-items: center;
   padding: 10px;
   margin: 50px;
+  position: relative;
 
 }
+
 
 .recipe {
   font-family: $p-font;
@@ -26,7 +28,11 @@
     width: auto;
     object-fit: cover;
     padding: 10px;
+
+    @media only screen and (max-width: 768px) {
+    }
   }
+
 
   h2 {
     font-size: 16px;
@@ -44,6 +50,16 @@
     margin: 10px;
     font-family: $p-font;
   }
+
+  .trash {
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+  }
+  @media only screen and (max-width: 768px) {
+    display: table-cell;
+    margin: 0;
+  }
 }
 
   .card-show-info {
@@ -54,5 +70,8 @@
     a {
       color: #555555;
       font-family: $p-font;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 50%;
     }
   }
