@@ -11,7 +11,10 @@
   </head>
   <body>
     <div class="navbar">
-      <a href="#"><img src="https://fontmeme.com/permalink/190809/766cb9d0f0aaf6c82093238829733a3a.png" alt="art-deco-fonts" border="0"></a>    </div>
+      <%= link_to cocktails_path do %>
+        <img src="https://fontmeme.com/permalink/190809/766cb9d0f0aaf6c82093238829733a3a.png" alt="art-deco-fonts" border="0">
+      <% end %>
+    </div>
     <!-- render 'stylesheets/components/card'
  -->    <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
