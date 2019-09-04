@@ -1,45 +1,60 @@
-.card {
+.card-cocktail {
   overflow: hidden;
-  width: 250px;
-  height: auto;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 33%;
+  height: 30vh;
   align-items: center;
-  padding: 10px;
+  padding: 5px;
   margin: 50px;
+  position: relative;
+  background-color: #f2f4f2;
+  display: flex;
 }
 
-.card {
+.card-cocktail {
 
-
+.recipe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
   img {
     height: 100%;
-    width: 120px;
-    // object-fit: cover;
+    width: 175px;
+    border-radius: 4px;
+    object-fit: cover;
+
   }
 
   h2 {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     margin: 0;
   }
 
   p {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 0;
     margin-top: 8px;
     color: #555555;
+
   }
 }
 
-  .card-info {
+  .card-cocktail-info {
     padding: 16px;
+    font-size: 22px;
 
     a {
       color: #555555;
       font-family: $p-font;
+      font-size: 26px;
     }
   }
 

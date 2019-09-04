@@ -1,34 +1,35 @@
-
-  <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card-show">
-              <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-              <div class="card-how-info">
-            <div class="name">
-          <h1><%= @cocktail.name %></h1>
+<div class="container">
+  <div class="row center">
+    <div class="col">
+      <div class="card-show">
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <div class="card-show-info">
+          <div class="name">
+            <h1><%= @cocktail.name %></h1>
           </div>
-                <p> <% @cocktail.doses.each do |dose| %>
-                  <div class="recipe">
-                  <%= dose.description  %>
-                  <%= dose.ingredient.name %>
-                  <%= link_to cocktail_dose_path(@cocktail, dose),
+          <p> <% @cocktail.doses.each do |dose| %>
+              <div class="recipe">
+                <%= dose.description  %>
+                <%= dose.ingredient.name %>
+                <%= link_to cocktail_dose_path(@cocktail, dose),
                     method: :delete,
                     data: { confirm: 'for real real?' } do %>
-                      <i class="fas fa-trash" style="color: #555555;"></i>
-                  </div>
-                    <% end %>
-                  <% end %>
-                </p>
+                  <i class="fas fa-trash" style="color: #555555;"></i>
+                </div>
+              <% end %>
+            <% end %>
+            <br>
+            <div class="button-add">
+              <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %> <br>
             </div>
-            </div>
-            </div>
+          </p>
         </div>
+      </div>
+      <div class="row">
+        <div class="button">
+          <%= link_to "Back to cocktails", cocktails_path %>
+        </div>
+      </div>
     </div>
-      <footer>
-        <%= link_to "add ingredients", new_cocktail_dose_path(@cocktail) %> <br>
-        <%= link_to "back to cocktails", cocktails_path %>
-      </footer>
-
-
-
+  </div>
+</div>

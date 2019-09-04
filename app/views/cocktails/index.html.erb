@@ -1,23 +1,19 @@
 <div class="container">
-
-      <% @cocktails.each do |cocktail| %>
-        <div class="card">
-          <%= cl_image_tag cocktail.photo %>
-          <div class="card-info">
-              <ul>
-               <%= link_to cocktail.name, cocktail_path(cocktail) %>
-                <%= link_to cocktail_path(cocktail), method: :delete,
+  <% @cocktails.each do |cocktail| %>
+    <div class="card-cocktail">
+      <%= cl_image_tag cocktail.photo %>
+      <div class="card-cocktail-info">
+        <ul>
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          <%#= link_to cocktail_path(cocktail), method: :delete,
                 data: { confirm: 'reeeeeaaaaly?'} do %>
-                  <i class="fas fa-trash"></i>
-                  <% end %>
-
-              </ul>
-          </div>
+            <!--             <i class="fas fa-trash"></i>
+ -->            <%# end %>
+          </ul>
         </div>
-      <% end %>
-
-</div>
-
-<footer>
-  <%= link_to "Add a new cocktail", new_cocktail_path  %>
-</footer>
+      </div>
+    <% end %>
+    <div class="button">
+      <%= link_to "Add a new cocktail", new_cocktail_path  %>
+    </div>
+  </div>

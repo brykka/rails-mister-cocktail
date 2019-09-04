@@ -1,11 +1,12 @@
-<h1>I AM THE DOSE VIEW</h1>
-  <div class="container">
+<div class="container">
+  <div class="row">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.association :ingredient %>
       <%= f.input :description %>
       <%= f.button :submit, :class => "btn btn-light" %>
+      <div class="button-inform">
+        <%= link_to "Back to cocktails", cocktails_path %>
+      </div>
     <% end %>
   </div>
-  <footer>
-    <%= link_to "back", cocktails_path %>
-</footer>
+</div>

@@ -1,14 +1,11 @@
-<h1>NEW COCKTAIL</h1>
-
-  <div class="container">
-    <%= simple_form_for @cocktail do |f| %>
-      <%= f.input :name %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.button :submit, :class => "btn btn-light" %>
-    <% end %>
-  </div>
-
-  <footer>
-    <%= link_to "back", cocktails_path %>
-</footer>
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden%>
+    <%= f.button :submit, :class => "btn btn-light" %>
+    <div class="button-inform">
+      <%= link_to "Back to cocktails", cocktails_path %>
+    </div>
+  <% end %>
+</div>
